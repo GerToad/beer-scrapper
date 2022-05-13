@@ -1,3 +1,12 @@
+:root {
+  --weiss-color: #fefdfe;
+  --lighblue-color: #c8e1dc;
+  --dunkel-color: #010301;
+  --viola-color: #34416a;
+  --aqua-color: #37a691;
+  --gialo-color: #e0d05f;
+}
+
 .App {
   text-align: center;
 }
@@ -14,12 +23,11 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-image: url("./assets/Cerveza.jpg");
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
