@@ -1,26 +1,22 @@
 import React, {Component} from 'react';
 import './index.css';
+import { NavLink } from 'react-router-dom';
 
 class Navbar extends Component{
 
   render(){
-    let data = {
-      name: "Hanz",
-      surname: "Zimmer",
-      arbeit: "Musician"
-    }
-    /*<li>{data.name}</li>
-    <li>{data.surname}</li>
-    <li>{data.arbeit}</li>*/
 
     return (
       <nav className="navbar">
         <div className="bar">
-          <h1>Grab a drink</h1>
-          <ul>
-            <li><a href="#">Cities</a></li>
-            <li><a href="#">Bears</a></li>
-            <li><a href="#">Search</a></li>
+          <h1><NavLink to="/">Let's drink</NavLink></h1>
+
+          <ul className="menu">
+            <li>
+              <NavLink to="/cities" activeClassName="active">Cities</NavLink>
+            </li>
+            <li><NavLink to="/beers" activeClassName="active">Beers</NavLink></li>
+            <li><NavLink to="/home" activeClassName="active">Search</NavLink></li>
           </ul>
         </div>
       </nav>

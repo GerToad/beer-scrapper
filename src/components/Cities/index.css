@@ -1,0 +1,34 @@
+.cities{
+    background-image: url("../../assets/Night_City.png");
+    background-size: cover;
+    color: var(--weiss-color);
+    min-height: 1000px;
+}
+
+.cities h1{
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 25px;
+    padding-top: 95px;
+    background-color: var(--aqua-color);
+}
+
+.selector{
+    margin: 40px 0px;
+    width: 30%;
+    padding: 20px;
+    font-size: 22px;
+    text-align: center;
+    background-color: var(--dunkel-color);
+    color: var(--weiss-color);
+    transition: all 300ms;
+}
+
+.selector:hover{
+    border: 1px solid var(--gialo-color);
+}
+
+.selector option{
+    background-color: var(--dunkel-color);
+    color: var(--weiss-color);
+}

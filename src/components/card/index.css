@@ -16,9 +16,46 @@ section{
     justify-content: space-between;
 }
 
-p{
-    background-color: var(--viola-color);
+.intro{
+    background-color: var(--gialo-color);
+    color: var(--dunkel-color);
     width: 190px;
     padding: 20px;
-    margin: 30px;
+    margin: 0px 30px 0px 30px;
+}
+
+.service{
+    background-image: url("../../assets/beers.jpg");
+    background-size: cover;
+}
+
+.beer{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.beer a{
+    display: block;
+    margin-top: 15px;
+    color: var(--weis-color);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.beer li{
+    list-style: none;
+    margin: 20px;
+    width: 35%;
+    color: var(--weiss-color);
+    background-color: var(--dunkel-color);
+    border: 5px solid var(--gialo-color);
+}
+
+.beer span{
+    display: block;
+    margin-bottom: 20px;
 }

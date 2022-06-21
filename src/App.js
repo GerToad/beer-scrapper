@@ -1,17 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
 
-import Navbar from './components/navbar/index';
-import Card from './components/card/index';
+//import Navbar from './components/navbar/index';
+//import Card from './components/card/index';
+import Footer from './components/footer/index';
+import Router from './Router';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Navbar/>
-      </header>
+      <Router/>
+      {/*<Card/>*/}
 
-      <Card/>
+      <Footer/>
     </div>
   );
 }

@@ -8,8 +8,10 @@
 }
 
 .navbar{
-    background-color: var(--viola-color);
+    width: 100%;
     background-color: transparent;
+    position: absolute;
+    padding-top: 20px;
 }
 
 .bar{
@@ -35,19 +37,34 @@ h1{
     color: var(--weiss-color);
 }
 
+h1 a{
+  text-decoration: none;
+  color: var(--lighblue-color);
+}
+
 .navbar li{
     list-style: none;
     margin: 10px;
     margin-right: 60px;
 }
 
-.navbar a{
+.navbar ul a{
     text-decoration: none;
     color: var(--lighblue-color);
     font-size: 18px;
     transition: all 300ms;
+    padding: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
-.navbar a:hover{
+.navbar ul a:hover{
   color: var(--gialo-color);
+  border: 2px solid var(--gialo-color);
 }
+
+ul .active{
+  color: var(--weiss-color);
+  border: 2px solid var(--weiss-color);
+}
+
