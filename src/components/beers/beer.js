@@ -1,14 +1,14 @@
 import axios from 'axios';
 import React, {Component} from 'react';
 
-class City extends Component{
+class Beer extends Component{
   constructor(props){
     super(props);
     this.state = {
       error: null,
       isLoaded: false,
       items: [],
-      prevProps: {city: ""}
+      prevProps: {beer: ""}
     };
   }
 
@@ -21,8 +21,8 @@ class City extends Component{
   }
 
   getBeers = (prevProps) => {
-    if(this.props.city !== prevProps.city){
-      axios.get('https://api.openbrewerydb.org/breweries?by_city='+this.props.city+'&per_page=4')
+    if(this.props.beer !== prevProps.beer){
+      axios.get('https://api.openbrewerydb.org/breweries/'+this.props.beer)
         .then(res => {
           this.setState({
             isLoaded: true,
@@ -37,7 +37,9 @@ class City extends Component{
             prevProps: this.props
           });
         });
-    }
+      }else{
+        console.log("It failed");
+      }
   }
 
   render(){
@@ -50,20 +52,18 @@ class City extends Component{
     } else{
       return(
         <ul className="beer">
-            {items.map(beer => (
-            <li key={beer.id}>
-                <a href={beer.website_url}>{beer.name} - {beer.brewery_type}</a>
-                <p>{beer.country} - {beer.state}</p>
-                <p>{beer.city}</p>
-                {beer.phone && (
-                  <span>Phone: {beer.phone}</span>
+            <li key={items.id}>
+                <a href={items.website_url}>{items.name} - {items.brewery_type}</a>
+                <p>{items.country} - {items.state}</p>
+                <p>{items.city}</p>
+                {items.phone && (
+                  <span>Phone: {items.phone}</span>
                 )}
             </li>
-            ))}
         </ul>
       );
     }
   }
 }
 
-export default City;
+export default Beer;

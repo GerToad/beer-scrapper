@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
 :root {
   --weiss-color: #fefdfe;
   --lighblue-color: #c8e1dc;
@@ -7,8 +11,18 @@
   --gialo-color: #e0d05f;
 }
 
+h1{
+  font-family: "Anton";
+}
+
+h2{
+  font-family: "Roboto Mono";
+  font-size: 32px;
+}
+
 .App {
   text-align: center;
+  font-family: "Roboto";
 }
 
 .App-logo {
@@ -21,12 +35,7 @@
   background-size: cover;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   font-size: calc(10px + 2vmin);
   color: white;
+  align-items: end;
 }
-
-.App-link {
-  color: #61dafb;
-}
-

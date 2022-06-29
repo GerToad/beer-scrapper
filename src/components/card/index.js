@@ -24,6 +24,12 @@ class Card extends Component{
           isLoaded: true,
           items: res.data
         });
+        // Total breweries
+        var breweries = []
+        for(let brew of this.state.items){
+          breweries.push({id: brew.id, name: brew.name});
+        }
+          console.log(breweries);
       })
       .catch(error => {
         this.setState({
@@ -43,9 +49,11 @@ class Card extends Component{
     } else{
       return(
         <div>
-          <header className="App-header"></header>
+          <header className="App-header">
+            <p className="banner">Have you been looking for a different beer? We got you</p>
+          </header>
           <div className="card">
-            <h2>Choose a beer</h2>
+            <h2>Choose a beer!</h2>
             <section>
               <img src={require("../../assets/images.jpeg")} alt="beer"/>
               <p className="intro">

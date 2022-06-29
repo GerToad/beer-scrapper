@@ -1,3 +1,14 @@
+.banner{
+    width: 20%;
+    height: 100%;
+    background-color: var(--dunkel-color);
+    margin-top: 7%;
+    margin-bottom: 0px;
+    margin-left: 5%;
+    padding: 10% 20px;
+    font-family: "Roboto Mono";
+}
+
 .card{
     background: var(--dunkel-color);
     color: var(--weiss-color);

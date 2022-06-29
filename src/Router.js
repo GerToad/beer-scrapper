@@ -6,6 +6,7 @@ import Card from './components/card/index';
 import Error from './components/error/index';
 import Navbar from './components/navbar/index';
 import Beers from './components/beers/index';
+import Search from './components/search/index';
 
 class Router extends Component {
 
@@ -20,6 +21,7 @@ class Router extends Component {
           <Route path="/home" element={<Card/>}/>
           <Route path="/beers" element={<Beers/>}/>
           <Route path="/cities" element={<Cities/>}/>
+          <Route path="/search/:brew" element={<Search/>}/>
           <Route path="*" element={<Error/>}/>
         </Routes>
       </BrowserRouter>
@@ -28,3 +30,10 @@ class Router extends Component {
 }
 
 export default Router;
+
+
+/*dafne juarez
+jose.flores@sinvero.com
+sinvero
+9 - 6
+10,000*/
