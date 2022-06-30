@@ -1,34 +1,15 @@
-.beers{
+.search{
     background-image: url("../../assets/vegan.jpeg");
     background-size: cover;
     color: var(--weiss-color);
     min-height: 1000px;
 }
 
-.beers h1{
+.search h1{
     margin: 0px;
     padding: 0px;
     padding-bottom: 25px;
-    padding-top: 95px;
+    padding-top: 115px;
     background-color: var(--aqua-color);
 }
 
-.beer_selector{
-    margin: 40px 0px;
-    width: 30%;
-    padding: 20px;
-    font-size: 22px;
-    text-align: center;
-    background-color: var(--dunkel-color);
-    color: var(--weiss-color);
-    transition: all 300ms;
-}
-
-.beer_selector:hover{
-    border: 1px solid var(--gialo-color);
-}
-
-.beer_selector option{
-    background-color: var(--dunkel-color);
-    color: var(--weiss-color);
-}

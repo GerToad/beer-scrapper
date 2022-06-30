@@ -38,7 +38,7 @@ class Beer extends Component{
           });
         });
       }else{
-        console.log("It failed");
+        console.log("It's all");
       }
   }
 

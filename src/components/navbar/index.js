@@ -24,6 +24,9 @@ class Navbar extends Component{
   render(){
 
     if(this.state.redirect){
+      this.setState({
+          redirect: false
+      });
       return (
         <Navigate to={'/search/'+this.state.search}/>
       )
@@ -35,8 +38,8 @@ class Navbar extends Component{
           <h1><NavLink to="/">Let's have a drink!</NavLink></h1>
 
           <div className="menu">
-            <div><NavLink to="/cities" activeClassName="active">Cities</NavLink></div>
-            <div><NavLink to="/beers" activeClassName="active">Beers</NavLink></div>
+            <div><NavLink to="/cities" activeclassname="active">Cities</NavLink></div>
+            <div><NavLink to="/beers" activeclassname="active">Beers</NavLink></div>
             <form onSubmit={this.formular}>
               <input type="text" name="search" ref={this.search}/>
               <input type="submit" value="Search"/>
