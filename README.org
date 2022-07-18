@@ -1,0 +1,19 @@
+#+title: Beer scraper
+#+author: Gerardo
+
+Small scraper for compare beer's prices on your city.
+With this web app you can see the prices and choose the one that fits for you.
+
+Currently on development using API's available.
+
+** Features
++ Look for your favorite
++ Filter between the prices
++ See what you can get on your city
++ Get information about every single beer
+
+** Built with
++ React
++ NPM
++ API
+  + Open Brewery DB
