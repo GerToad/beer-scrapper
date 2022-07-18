@@ -16,4 +16,4 @@ Currently on development using API's available.
 + React
 + NPM
 + API
-  + Open Brewery DB
+  + Open Brewery DB: https://www.openbrewerydb.org/
