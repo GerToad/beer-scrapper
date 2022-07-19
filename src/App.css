@@ -39,3 +39,10 @@ h2{
   color: white;
   align-items: end;
 }
+
+.load{
+  min-height: 520px;
+  background-color: var(--dunkel-color);
+  color: (--weiss-color);
+  font-size: 20px;
+}
