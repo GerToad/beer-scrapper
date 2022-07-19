@@ -4,6 +4,7 @@ import './index.css';
 
 class Card extends Component{
 
+  // Using old way to set state
   constructor(props){
     super(props);
     this.state = {
@@ -13,10 +14,12 @@ class Card extends Component{
     };
   }
 
+  // Mounting the request to get the data
   componentDidMount(){
     this.getBeers();
   }
 
+  // Request for beers data
   getBeers = () => {
     axios.get('https://api.openbrewerydb.org/breweries?per_page=10')
       .then(res => {
@@ -29,8 +32,8 @@ class Card extends Component{
         for(let brew of this.state.items){
           breweries.push({id: brew.id, name: brew.name});
         }
-          console.log(breweries);
       })
+      // Catching errors
       .catch(error => {
         this.setState({
           isLoaded: true,
@@ -40,12 +43,13 @@ class Card extends Component{
   }
 
   render(){
+    // Using statel
     const { error, isLoaded, items } = this.state;
 
     if(error){
       return <div>Error: {error.message}</div>
     } else if (!isLoaded){
-      return <div>Loading...</div>
+      return <div className="load">Loading...</div>
     } else{
       return(
         <div>
@@ -63,12 +67,15 @@ class Card extends Component{
           </div>
           <div className="service">
             <ul className="beer">
+              {/* Mapping items */}
                 {items.map(beer => (
                   <li key={beer.id}>
                     <a href={beer.website_url}>{beer.name} - {beer.brewery_type}</a>
                     <p>{beer.country} - {beer.state}</p>
                     <p>{beer.city}</p>
-                    <span>Phone: {beer.phone}</span>
+                    { beer.phone && ( // if phone exists
+                      <span>Phone: {beer.phone}</span>
+                    )}
                   </li>
                 ))}
             </ul>

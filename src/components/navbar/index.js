@@ -4,6 +4,7 @@ import { NavLink, Navigate } from 'react-router-dom';
 
 class Navbar extends Component{
 
+  // Form reference
   search = React.createRef();
 
   state = {
@@ -11,10 +12,11 @@ class Navbar extends Component{
     redirect: false
   };
 
+
+  // Take the form value and set it in state, also redirect
   formular = (e) => {
     e.preventDefault();
     let brewerie = this.search.current.value;
-    console.log(brewerie);
     this.setState({
       search: brewerie,
       redirect: true
@@ -23,6 +25,7 @@ class Navbar extends Component{
 
   render(){
 
+    // Redirect to search
     if(this.state.redirect){
       this.setState({
           redirect: false
@@ -40,6 +43,8 @@ class Navbar extends Component{
           <div className="menu">
             <div><NavLink to="/cities" activeclassname="active">Cities</NavLink></div>
             <div><NavLink to="/beers" activeclassname="active">Beers</NavLink></div>
+
+            {/* Search form */}
             <form onSubmit={this.formular}>
               <input type="text" name="search" ref={this.search}/>
               <input type="submit" value="Search"/>

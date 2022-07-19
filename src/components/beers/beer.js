@@ -2,6 +2,8 @@ import axios from 'axios';
 import React, {Component} from 'react';
 
 class Beer extends Component{
+
+  // Constructor for state and props
   constructor(props){
     super(props);
     this.state = {
@@ -12,18 +14,22 @@ class Beer extends Component{
     };
   }
 
+  // Mounting request
   componentDidMount(){
     this.getBeers(this.state.prevProps);
   }
 
+  // Updating the request
   componentDidUpdate(){
     this.getBeers(this.state.prevProps);
   }
 
+  // Request
   getBeers = (prevProps) => {
     if(this.props.beer !== prevProps.beer){
       axios.get('https://api.openbrewerydb.org/breweries/'+this.props.beer)
         .then(res => {
+          // Setting state
           this.setState({
             isLoaded: true,
             items: res.data,
@@ -31,6 +37,7 @@ class Beer extends Component{
           });
         })
         .catch(error => {
+          // Catching error
           this.setState({
             isLoaded: true,
             error: error,
@@ -38,11 +45,12 @@ class Beer extends Component{
           });
         });
       }else{
-        console.log("It's all");
+        console.log("Nothing to show");
       }
   }
 
   render(){
+    // State
     const { error, isLoaded, items } = this.state;
 
     if(error){
@@ -52,6 +60,7 @@ class Beer extends Component{
     } else{
       return(
         <ul className="beer">
+            {/* Mapping */}
             <li key={items.id}>
                 <a href={items.website_url}>{items.name} - {items.brewery_type}</a>
                 <p>{items.country} - {items.state}</p>

@@ -4,6 +4,7 @@ import Beer from './beer';
 
 class Beers extends Component{
 
+  // Constructor for state and props
   constructor(props){
     super(props);
     this.state = {
@@ -11,6 +12,7 @@ class Beers extends Component{
     };
   }
 
+  // Beers brief list to be display
   beers = [
     {value: "madtree-brewing-cincinnati", key: "MadTree Brewing"},
     {value: "banjo-brewing-fayetteville", key: "Banjo Brewing"},
@@ -24,6 +26,7 @@ class Beers extends Component{
     {value: "center-pivot-quinter", key: "Center Pivot"},
   ]
 
+  // Setting state from select/option
   change = (event) =>{
     this.setState({
       beer: event.target.value
@@ -41,6 +44,7 @@ class Beers extends Component{
             ))}
           </select>
 
+          {/* Request from Beer component passing the beer on props */}
           <Beer
             beer={this.state.beer}
           />
